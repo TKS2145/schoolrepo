@@ -1,3 +1,5 @@
+from datetime import date
+
 Name = input("What is your name?")
 gender = input("What is your gender? (M/F) ").upper()
 
@@ -5,7 +7,11 @@ while gender != "M" and gender != "F":
     print("Please enter M or F only.")
     gender = input("What is your gender? (M/F) ").upper()
 
-day = input("On what day were you born?").lower()
+birth_date = date(input("Enter your birthday")) #Enter birth date and assigns to date variable
+day_born = brith_date.day #Suppose to extract the day from the birth date
+day_born = dayborn.lower
+
+#day = input("On what day were you born?").lower()
 
 male_names = {
     'monday': 'Kwadwo',
@@ -29,9 +35,9 @@ female_names = {
 
 def ashanti(gender):
     if gender == "M":
-        ashanti_name = male_names[day]
+        ashanti_name = male_names[day_born]
     elif gender == "F":
-        ashanti_name = female_names[day]
+        ashanti_name = female_names[day_born]
     return ashanti_name
 
 ashanti_name_result = ashanti(gender)
