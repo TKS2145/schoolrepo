@@ -1,6 +1,6 @@
 import datetime
 
-Name = input("What is your name?")
+name = input("What is your name?")
 gender = input("What is your gender? (M/F) ").upper()
 
 while gender != "M" and gender != "F":
@@ -46,4 +46,4 @@ def ashanti(gender):
     return ashanti_name
 
 ashanti_name_result = ashanti(gender)
-print(ashanti_name_result)
+print("Your ashanti name is " + name + " " + ashanti_name_result)
