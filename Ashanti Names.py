@@ -7,7 +7,11 @@ while gender != "M" and gender != "F":
     print("Please enter M or F only.")
     gender = input("What is your gender? (M/F) ").upper()
 
-birth_date = date(input("Enter your birthday")) #Enter birth date and assigns to date variable
+ #Enter birth date and assigns to date variable
+year = int(input("Enter your birth year: "))
+month = int(input("Enter your birth month: "))
+date = int(input("Enter your birth date: "))
+day_borth = date(year, month, date) 
 day_born = brith_date.day #Suppose to extract the day from the birth date
 day_born = dayborn.lower
 
