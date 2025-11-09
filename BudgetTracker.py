@@ -1,9 +1,11 @@
 #TKS Budget Tracker
 print("Welcome to the budget tracker of TKS")
-print("/n")
+print("\n")
 
 def main():
     option = OptionScreen()
+    print(option)
+
 
 def OptionScreen():
 
@@ -13,6 +15,17 @@ def OptionScreen():
     print("3) Filter")
     print("4) Show summary")
     print("0) exit")
-    option = input("Choose option")
-    return option
+    
+    option = int(input("Choose option: "))
+    while option < 0 or option > 4:
+        option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))
+        
+    if option == 0 :
+        SystemExit
+    else:
+        return option
+
+#main at the bottom to let the other subroutines and functions get translated
+main() #calling main. Python is very weird. 
+
 
