@@ -24,6 +24,24 @@ def OptionScreen():
         SystemExit
     else:
         return option
+    
+def IncomeAdder():
+
+    #adds income
+    print("Wazaaa")
+
+
+def ExpenseAdder():
+    print("Wazaaa")
+
+
+def Filter():
+    print("Wazaaa")
+
+
+def Summary():
+    print("Wazaaa")
+
 
 #main at the bottom to let the other subroutines and functions get translated
 main() #calling main. Python is very weird. 
