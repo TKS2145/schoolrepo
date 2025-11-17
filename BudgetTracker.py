@@ -2,6 +2,10 @@
 print("Welcome to the budget tracker of TKS")
 print("\n")
 
+import IncomeAdder
+import ExpenseAdder
+
+
 def main():
     option = OptionScreen()
     print(option)
@@ -35,22 +39,18 @@ def OptionScreen():
                 return option
         except:
             print("Please enter a 'number' from (0 - 4)")
-def IncomeAdder():
-
-    #adds income
-    print("Wazaaa")
 
 
-def ExpenseAdder():
-    print("Wazaaa")
 
 
 def Filter():
     print("Wazaaa")
 
 
+
 def Summary():
     print("Wazaaa")
+
 
 
 #main at the bottom to let the other subroutines and functions get translated
