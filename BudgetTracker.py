@@ -6,6 +6,12 @@ def main():
     option = OptionScreen()
     print(option)
 
+    match OptionScreen():
+        case 1: IncomeAdder
+        case 2: ExpenseAdder
+        case 3: Filter
+        case 4: Summary
+
 
 def OptionScreen():
 
@@ -16,15 +22,19 @@ def OptionScreen():
     print("4) Show summary")
     print("0) exit")
     
-    option = int(input("Choose option: "))
-    while option < 0 or option > 4:
-        option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))
+    while true:
+        try
+            
+            option = int(input("Choose option (0 - 4): "))
+            while option < 0 or option > 4:
+                option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))
         
-    if option == 0 :
-        SystemExit
-    else:
-        return option
-    
+            if option == 0 :
+                SystemExit
+            else:
+                return option
+        except:
+            print("Please enter a 'number' from (0 - 4)")
 def IncomeAdder():
 
     #adds income
