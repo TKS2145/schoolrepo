@@ -11,9 +11,10 @@ print("\n")
 def main():
 
     option = OptionScreen()
+    
     print(option)
 
-    match OptionScreen():
+    match option:
         case 1: IncomeAdder
         case 2: ExpenseAdder
         case 3: Filter
@@ -42,10 +43,6 @@ def OptionScreen():
                 return option
         except:
             print("Please enter a 'number' from (0 - 4)")
-
-
-
-
 
 
 
