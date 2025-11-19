@@ -1,12 +1,15 @@
+import IncomeAdder
+import ExpenseAdder
+import Filter
+import Summary
+
 #TKS Budget Tracker
 print("Welcome to the budget tracker of TKS")
 print("\n")
 
-import IncomeAdder
-import ExpenseAdder
-
 
 def main():
+
     option = OptionScreen()
     print(option)
 
@@ -26,8 +29,8 @@ def OptionScreen():
     print("4) Show summary")
     print("0) exit")
     
-    while true:
-        try
+    while True:
+        try:
             
             option = int(input("Choose option (0 - 4): "))
             while option < 0 or option > 4:
@@ -43,17 +46,10 @@ def OptionScreen():
 
 
 
-def Filter():
-    print("Wazaaa")
 
-
-
-def Summary():
-    print("Wazaaa")
 
 
 
 #main at the bottom to let the other subroutines and functions get translated
 main() #calling main. Python is very weird. 
-
 
