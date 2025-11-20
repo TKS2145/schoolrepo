@@ -1,0 +1,3 @@
+#adds income
+print("Wazaaa")
+

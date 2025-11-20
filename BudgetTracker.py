@@ -15,10 +15,11 @@ def main():
     print(option)
 
     match option:
-        case 1: IncomeAdder
-        case 2: ExpenseAdder
-        case 3: Filter
-        case 4: Summary
+        case 1: IncomeAdder()
+        case 2: ExpenseAdder()
+        case 3: Filter()
+        case 4: Summary()
+
 
 
 def OptionScreen():
@@ -31,8 +32,8 @@ def OptionScreen():
     print("0) exit")
     
     while True:
-        try:
-            
+   
+        try:     
             option = int(input("Choose option (0 - 4): "))
             while option < 0 or option > 4:
                 option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))

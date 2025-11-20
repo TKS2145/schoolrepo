@@ -1,0 +1,4 @@
+def ExpenseAdder:
+
+    print("Wazaaa")
+
