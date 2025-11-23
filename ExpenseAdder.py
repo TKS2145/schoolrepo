@@ -1,4 +1,2 @@
-def ExpenseAdder:
-
+def  ExpenseAdder() :
     print("Wazaaa")
-

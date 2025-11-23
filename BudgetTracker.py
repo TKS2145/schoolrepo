@@ -2,6 +2,8 @@ import IncomeAdder
 import ExpenseAdder
 import Filter
 import Summary
+import ExitSystem
+
 
 #TKS Budget Tracker
 print("Welcome to the budget tracker of TKS")
@@ -15,10 +17,10 @@ def main():
     print(option)
 
     match option:
-        case 1: IncomeAdder()
-        case 2: ExpenseAdder()
-        case 3: Filter()
-        case 4: Summary()
+        case 1 : IncomeAdder.IncomeAdder()
+        case 2 : ExpenseAdder.ExpenseAdder()
+        case 3 : Filter.Filter()
+        case 4 : Summary.Summary()
 
 
 
@@ -39,7 +41,8 @@ def OptionScreen():
                 option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))
         
             if option == 0 :
-                SystemExit
+                print("Exiting the program")
+                ExitSystem.ExitProgram()
             else:
                 return option
         except:
