@@ -1,5 +1,5 @@
-class transaction(NewDate, NewAmount, NewCategory, NewDesciptom):
-    def __init__(self):
+class transaction:
+    def __init__(NewDate, NewAmount, NewCategory, NewDescription):
         Date = NewDate
         Amount = NewAmount
         Category = NewCategory

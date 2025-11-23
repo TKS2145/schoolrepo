@@ -1,13 +1,13 @@
+#TKS Budget Tracker
+print("Welcome to the budget tracker of TKS")
+print("\n")
+
 import IncomeAdder
 import ExpenseAdder
 import Filter
 import Summary
 import ExitSystem
-
-
-#TKS Budget Tracker
-print("Welcome to the budget tracker of TKS")
-print("\n")
+import TransactionObject
 
 
 def main():
