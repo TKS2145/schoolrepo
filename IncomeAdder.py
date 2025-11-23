@@ -1,3 +1,3 @@
-#adds income
-print("Wazaaa")
-
+def IncomeAdder():
+    #adds income
+    print("Income will be added")

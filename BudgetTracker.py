@@ -14,7 +14,7 @@ def main():
 
     option = OptionScreen()
     
-    print(option)
+    print("Option ", option, " selected")
 
     match option:
         case 1 : IncomeAdder.IncomeAdder()
@@ -39,15 +39,14 @@ def OptionScreen():
             option = int(input("Choose option (0 - 4): "))
             while option < 0 or option > 4:
                 option = int(input("Invalid option. Enter a number from 0 to 4 (inclusive): "))
-        
-            if option == 0 :
-                print("Exiting the program")
-                ExitSystem.ExitProgram()
-            else:
-                return option
+
         except:
             print("Please enter a 'number' from (0 - 4)")
 
+        if option == 0 :
+            ExitSystem.ExitProgram()
+        else:
+            return option        
 
 
 
