@@ -5,3 +5,9 @@ class transaction:
         Category = NewCategory
         Desciption = NewDescription
 
+class income(transaction):
+    pass
+
+class expense(transaction):
+    pass
+
