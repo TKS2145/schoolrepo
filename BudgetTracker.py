@@ -13,16 +13,17 @@ from datetime import datetime
 
 def main():
 
-    option = OptionScreen()
+    while True:
+
+        option = OptionScreen()
     
-    print("Option ", option, " selected")
+        print("Option ", option, " selected")
 
-
-    match option:
-        case 1 : IncomeAdder.IncomeAdder()
-        case 2 : ExpenseAdder.ExpenseAdder()
-        case 3 : Filter.Filter()
-        case 4 : Summary.Summary()
+        match option:
+            case 1 : IncomeAdder.IncomeAdder()
+            case 2 : ExpenseAdder.ExpenseAdder()
+            case 3 : Filter.Filter()
+            case 4 : Summary.Summary()
 
 
 
