@@ -1,7 +1,7 @@
 from datetime import datetime
 class transaction:
 
-    income = float(0)
+    amount = float(0)
     date = datetime.strptime("01/01/0001", "%d/%m/%Y")
     category = ""
     description =""
@@ -9,7 +9,7 @@ class transaction:
     def __init__(self):
             while True :
                 try:
-                    self.income = float(input("Enter the how much income to add: "))
+                    self.amount = float(input("Enter the how much income to add: "))
                     break
                 except:
                     print("Please enter an numerical value")
@@ -32,11 +32,11 @@ class Income(transaction):
     pass
 
     def HasBeenAdded(self):
-        print("Income of " , self.income  , " on the " , self.date.strftime("%d/%m%Y") , " has been added.")
+        print("Income of " , self.amount  , " on the " , self.date.strftime("%d/%m%Y") , " has been added.")
 
 class Expense(transaction):
     pass
 
     def HasBeenAdded(self):
-        print("Expense of " , self.income  , " on the " , self.date.strftime("%d/%m/%Y") , " has been added.")
+        print("Expense of " , self.amount  , " on the " , self.date.strftime("%d/%m/%Y") , " has been added.")
 
