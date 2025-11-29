@@ -8,7 +8,8 @@ import Filter
 import Summary
 import ExitSystem
 import TransactionObject
-import datetime
+import Global
+from datetime import datetime
 
 def main():
 
@@ -16,8 +17,6 @@ def main():
     
     print("Option ", option, " selected")
 
-    IncomeList =[]
-    ExpenseList =[]
 
     match option:
         case 1 : IncomeAdder.IncomeAdder()

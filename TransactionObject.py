@@ -1,11 +1,12 @@
-import datetime
+from datetime import datetime
 class transaction:
+
     income = float(0)
-    date = 00/00/0000
+    date = datetime.strptime("01/01/0001", "%d/%m/%Y")
     category = ""
     description =""
 
-    def __init__(self):
+    def __init__(self, income, date, category, description):
             while True :
                 try:
                     self.income = float(input("Enter the how much income to add: "))
@@ -15,7 +16,7 @@ class transaction:
 
             while True :
                 try:
-                 self.date = input("Please enter date of transaction(DD/MM/YYYY): ")
+                 self.date = datetime.strptime(input("Please enter date of transaction(DD/MM/YYYY): "))
         
                 except:
                     print("Please enter a date (DD/MM/YYYY)")
@@ -24,9 +25,15 @@ class transaction:
             self.description = input("Please enter a description: ")
 
 
-class income(transaction):
+class Income(transaction):
     pass
 
-class expense(transaction):
+    def HasBeenAdded(self, income, date):
+        print("Income of " , self.income  , " on the " , self.date , " has been added.")
+
+class Expense(transaction):
     pass
+   
+    def HasBeenAdded(self, income, date):
+        print("Expense of " , self.income  , " on the " , self.date , " has been added.")
 
