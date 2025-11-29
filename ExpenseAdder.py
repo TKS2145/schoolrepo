@@ -1,2 +1,2 @@
-def  ExpenseAdder() :
-    print("Wazaaa")
+def  ExpenseAdder():
+    print("Expense will be added")
