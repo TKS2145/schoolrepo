@@ -8,8 +8,13 @@ TempExpenseList = list(Global.ExpenseList)
 
 def Filter():
 
-    option = optionscreen
+    option = optionscreen()
 
+    match option:
+        case 1: CategoryFilter()
+        case 2: print("Wazaa")
+        case 3:
+            print("Wazaaaa")
   
 
 def optionscreen():
@@ -32,23 +37,38 @@ def optionscreen():
 
 def CategoryFilter():
 
-    CategoryList = []
+    if len(TempIncomeList) + len(TempExpenseList) != 0 :
 
-    for i in len(TempIncomeList):
-        if TempIncomeList[i].category not in CategoryFilter:
-            CategoryFilter.append(TempIncomeList[i])
+        CategoryList = []
 
-    for i in len(TempExpenseList):
-        if TempExpenseList[i].category not in CategoryFilter:
-            CategoryFilter.append(TempExpenseList[i])
+        for i in TempIncomeList:
+            if TempIncomeList[i].category not in CategoryFilter:
+                CategoryFilter.append(TempIncomeList[i])
 
-    while True:
-        try:
-            print(CategoryList)
-            index = input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ") #Enter the position of the item
-            index = index - 1   #As array index starts with 0 so one less1 for first, 2 for second...)
-            Category = CategoryList[index]  #Category item obtained to filter the lists
-        except:
-            print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
-        
+        for i in TempExpenseList:
+            if TempExpenseList[i].category not in CategoryFilter:
+                CategoryFilter.append(TempExpenseList[i])
+
+        while True:
+            try:
+                print(CategoryList)
+                index = input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ") #Enter the position of the item
+                index = index - 1   #As array index starts with 0 so one less1 for first, 2 for second...)
+                Category = CategoryList[index]  #Category item obtained to filter the lists
+                break
+            except:
+                print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
+            
+        for i in TempIncomeList:
+            if Category == TempIncomeList[i].Category :
+                TempIncomeList[i].output
+
+        for i in TempExpenseList:
+            if Category == TempExpenseList[i].category :
+                TempExpenseList[i].output
     
+        return
+
+    else:
+        print("No transactions stored. Nothing to filter")
+        return
