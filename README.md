@@ -57,3 +57,13 @@ Summary also works and provides number of incomes, number of expenses, sum of al
 
 
 Using different data to test if expenses is greater than income:
+
+![alt text](Screenshot_20251206_010648.png)
+
+As seen, when expense is greater than income, the amount due is shown instead and here it is 1000
+I deliberately did not add a unit (Roupies nor Dollars). That way the user can calculate using any currency he/she wants
+
+![alt text](Screenshot_20251206_011017.png)
+
+Rare case total incomes and total expenses are exactly the same, messages changes to reflect all money spent.
+

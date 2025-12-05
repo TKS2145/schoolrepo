@@ -47,15 +47,14 @@ def CategoryFilter():
 
     i = 0
     while i < len(IncomeList):  #Looping through IncomeList
-        print(IncomeList[i].category)
         if IncomeList[i].category not in CategoryList:
-            CategoryFilter.append(IncomeList[i].category)   #Adding category item to CategoryList
+            CategoryList.append(IncomeList[i].category)   #Adding category item to CategoryList
         i += 1 #Incrementing i
 
     i = 0
     while  i < len(ExpenseList):
         if ExpenseList[i].category not in CategoryList:
-            CategoryFilter.append(ExpenseList[i].category)
+            CategoryList.append(ExpenseList[i].category)
         i += 1
 
     #All the different categories of the transactions have been obtained
