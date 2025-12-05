@@ -1,13 +1,12 @@
 import TransactionObject
-import Global
+from Global import IncomeList
+from Global import ExpenseList 
 import datetime
 
-TempIncomeList = list(Global.IncomeList)    #Passing into another list as I plan to remove items from them
-TempExpenseList = list(Global.ExpenseList)
 
 def Filter():
 
-    if len(TempIncomeList) + len(TempExpenseList) != 0 :    #If sum is 0, then both lists are empty
+    if (len(IncomeList) + len(ExpenseList)) != 0 :    #If sum is 0, then both lists are empty
 
         option = optionscreen()
 
@@ -46,13 +45,13 @@ def CategoryFilter():
     
     CategoryList = []
 
-    for i in range(0, len(TempIncomeList)):
-        if TempIncomeList[i].category not in CategoryFilter:
-            CategoryFilter.append(TempIncomeList[i])
+    for i in range(0, len(IncomeList)):
+        if IncomeList[i].category not in CategoryFilter:
+            CategoryFilter.append(IncomeList[i])
 
-    for i in range(0 , len(TempExpenseList)):
-        if TempExpenseList[i].category not in CategoryFilter:
-            CategoryFilter.append(TempExpenseList[i])
+    for i in range(0 , len(ExpenseList)):
+        if ExpenseList[i].category not in CategoryFilter:
+            CategoryFilter.append(ExpenseList[i])
 
     while True:
         try:
@@ -64,13 +63,13 @@ def CategoryFilter():
         except:
             print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
         
-    for i in range(0,len(TempIncomeList) - 1):
-        if Category == TempIncomeList[i].Category :
-            TempIncomeList[i].output
+    for i in range(0,len(IncomeList) - 1):
+        if Category == IncomeList[i].Category :
+            IncomeList[i].output
 
-    for i in range(0, len(TempExpenseList) - 1):
-        if Category == TempExpenseList[i].category :
-            TempExpenseList[i].output
+    for i in range(0, len(ExpenseList) - 1):
+        if Category == ExpenseList[i].category :
+            ExpenseList[i].output
 
     return
 
@@ -92,12 +91,12 @@ def MonthFilter():
 
     IsPresent = False   #Variable to check if the month was found in the program
 
-    for i in TempIncomeList:
+    for i in IncomeList:
         if i.date.month == VarMonth:
             IsPresent = True
             print(i.output)
 
-    for i in TempExpenseList:
+    for i in ExpenseList:
         if i.date.month == VarMonth:
             IsPresent = True
             print(i.output)
@@ -112,16 +111,16 @@ def TypeFilter():
   
     
          
-    if len(TempIncomeList) != 0 :   #If IncomeList not empty
+    if len(IncomeList) != 0 :   #If IncomeList not empty
         print("Incomes:")
-        for i in TempIncomeList:
+        for i in IncomeList:
             print(i.date.strftime("%d/%m/%Y") , " - " , i.category , " - " , i.amount)
     else:   #Else it empty
         print("There are no incomes.")
 
-    if len(TempExpenseList) != 0 :  #If ExpenseList not empty
+    if len(ExpenseList) != 0 :  #If ExpenseList not empty
         print("Expenses:")
-        for i in TempExpenseList:
+        for i in ExpenseList:
             print(i.date.strftime("%d/%m/%Y") , " - " , i.category , " - " , i.amount)
     else:   #Else, it empty
         print("There are no expenses.")

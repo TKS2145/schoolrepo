@@ -3,8 +3,10 @@ from Global import ExpenseList
 
 def Summary():
     
+    print("--SUMMARY--\n")
               
     if len(IncomeList) == 0 and len(ExpenseList) == 0: #If there are no transactions, no need to continue
+        print("There are no transactions currently")
         return
     
     else :

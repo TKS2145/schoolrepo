@@ -27,6 +27,8 @@ def main():
             case 4 : Filter.Filter()
             case 5 : Summary.Summary()
 
+        print()     #Empty line for aesthetics and code readability
+
 
 
 def OptionScreen():
