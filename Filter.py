@@ -1,6 +1,7 @@
 import TransactionObject
 import Global
-
+import datetime
+import ListTransac
 
 TempIncomeList = list(Global.IncomeList)
 TempExpenseList = list(Global.ExpenseList)
@@ -12,9 +13,9 @@ def Filter():
     match option:
         case 1: CategoryFilter()
         case 2: MonthFilter()
-        case 3:
-            print("Wazaaaa")
+        case 3: TypeFilter()
   
+    return #Return to main
 
 def optionscreen():
 
@@ -90,10 +91,20 @@ def MonthFilter():
                 print("Invalid input. Please enter the number corresponding to the month (1 - 12)")
     
 
+        IsPresent = False   #Variable to check if the month was found in the program
 
+        for i in TempIncomeList:
+            if i.date.month == VarMonth:
+                IsPresent = True
+                print(i.output)
 
+        for i in TempExpenseList:
+            if i.date.month == VarMonth:
+                IsPresent = True
+                print(i.output)
 
-
+        if IsPresent == False:  #Loops not executed so no matching month found in the lists
+            print("No month corresponds to month entered.")
 
         return
     
@@ -102,3 +113,10 @@ def MonthFilter():
     else:
         print("No transactions stored. Nothing to filter")
         return
+    
+
+def TypeFilter():
+  
+    ListTransac()   #Existing module list transaction already does requirement of what this module should be doing
+
+    return
