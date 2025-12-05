@@ -33,7 +33,7 @@ def optionscreen():
 
     while True:
         try:
-            option = int(input("Enter choise: "))
+            option = int(input("Enter choice: "))
             break
         except:
             print("Please enter a 'number' from 1 to 3")
@@ -45,24 +45,20 @@ def CategoryFilter():
     
     CategoryList = []
 
-    i = 0
-    while i < len(IncomeList):  #Looping through IncomeList
+    for  i in range(0, len(IncomeList)):  #Looping through IncomeList
         if IncomeList[i].category not in CategoryList:
             CategoryList.append(IncomeList[i].category)   #Adding category item to CategoryList
-        i += 1 #Incrementing i
 
-    i = 0
-    while  i < len(ExpenseList):
+    for  i in range(0, len(ExpenseList)):
         if ExpenseList[i].category not in CategoryList:
             CategoryList.append(ExpenseList[i].category)
-        i += 1
 
     #All the different categories of the transactions have been obtained
 
     while True:
         try:
             print(CategoryList)
-            index = input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ") #Enter the position of the item
+            index = int(input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ")) #Enter the position of the item
             index -= 1   #As array index starts with 0 so one less1 for first, 2 for second...)
             Category = CategoryList[index]  #Category item obtained to filter the lists
             break
