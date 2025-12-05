@@ -8,14 +8,14 @@ def ListTransactions():
     
     if len(IncomeList) != 0 :
         print("Incomes:")
-        for i in IncomeList:
+        for i in range(0, len(IncomeList)-1):
             print(IncomeList[i].date.strftime("%d/%m/%Y") , " - " , IncomeList[i].category , " - " , IncomeList[i].amount)
     else:
         print("There are no incomes.")
 
     if len(ExpenseList) != 0 :
         print("Expenses:")
-        for i in ExpenseList:
+        for i in range(0, len(ExpenseList) -1):
             print(ExpenseList[i].date.strftime("%d/%m/%Y") , " - " , ExpenseList[i].category , " - " , ExpenseList[i].amount)
     else:
         print("There are no expenses.")

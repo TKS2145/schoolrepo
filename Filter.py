@@ -59,11 +59,11 @@ def CategoryFilter():
             except:
                 print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
             
-        for i in TempIncomeList:
+        for i in range(0,len(TempIncomeList) -1):
             if Category == TempIncomeList[i].Category :
                 TempIncomeList[i].output
 
-        for i in TempExpenseList:
+        for i in range(0, len(TempExpenseList) -1):
             if Category == TempExpenseList[i].category :
                 TempExpenseList[i].output
     
