@@ -45,29 +45,36 @@ def CategoryFilter():
     
     CategoryList = []
 
-    for i in range(0, len(IncomeList)):
-        if IncomeList[i].category not in CategoryFilter:
-            CategoryFilter.append(IncomeList[i])
+    i = 0
+    while i < len(IncomeList):  #Looping through IncomeList
+        print(IncomeList[i].category)
+        if IncomeList[i].category not in CategoryList:
+            CategoryFilter.append(IncomeList[i].category)   #Adding category item to CategoryList
+        i += 1 #Incrementing i
 
-    for i in range(0 , len(ExpenseList)):
-        if ExpenseList[i].category not in CategoryFilter:
-            CategoryFilter.append(ExpenseList[i])
+    i = 0
+    while  i < len(ExpenseList):
+        if ExpenseList[i].category not in CategoryList:
+            CategoryFilter.append(ExpenseList[i].category)
+        i += 1
+
+    #All the different categories of the transactions have been obtained
 
     while True:
         try:
             print(CategoryList)
             index = input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ") #Enter the position of the item
-            index = index - 1   #As array index starts with 0 so one less1 for first, 2 for second...)
+            index -= 1   #As array index starts with 0 so one less1 for first, 2 for second...)
             Category = CategoryList[index]  #Category item obtained to filter the lists
             break
         except:
             print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
         
-    for i in range(0,len(IncomeList) - 1):
+    for i in range(0,len(IncomeList)):
         if Category == IncomeList[i].Category :
             IncomeList[i].output
 
-    for i in range(0, len(ExpenseList) - 1):
+    for i in range(0, len(ExpenseList)):
         if Category == ExpenseList[i].category :
             ExpenseList[i].output
 
@@ -108,8 +115,6 @@ def MonthFilter():
 
 
 def TypeFilter():
-  
-    
          
     if len(IncomeList) != 0 :   #If IncomeList not empty
         print("Incomes:")
