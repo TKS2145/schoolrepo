@@ -9,7 +9,7 @@ class transaction:
     def __init__(self):
         while True :
             try:
-                self.amount = float(input("Enter the how much income to add: "))
+                self.amount = float(input("Enter the amount of the transaction: "))
                 break
             except:
                 print("Please enter an numerical value")
