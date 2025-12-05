@@ -3,16 +3,6 @@ from Global import ExpenseList
 
 def Summary():
     
-
-    if  len(IncomeList) == 0:
-        print("There are no Incomes.")
-    else:
-        print("There are " , len(IncomeList) , " incomes.")
-
-    if len(ExpenseList) == 0:
-       print("There are no expenses.")
-    else:
-        print("There are " , len(ExpenseList) , " expenses.")
               
     if len(IncomeList) == 0 and len(ExpenseList) == 0: #If there are no transactions, no need to continue
         return
@@ -24,11 +14,11 @@ def Summary():
         totalincome = 0.0
         totalexpense = 0.0
 
-        for i in range(0,len(IncomeList)-1):
-            totalincome += IncomeList[i].amount
+        for i in IncomeList :
+            totalincome += i.amount
 
-        for i in range(0,len(ExpenseList)-1):
-            totalexpense += ExpenseList[i].amount
+        for i in ExpenseList:
+            totalexpense += i.amount
 
         print("Total incomes: " , totalincome)
         print("Total expenses: " , totalexpense)

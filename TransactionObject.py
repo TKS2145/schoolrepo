@@ -39,7 +39,7 @@ class Income(transaction):
     pass
 
     def HasBeenAdded(self):
-        print("Income of " , self.amount  , " on the " , self.date.strftime("%d/%m%Y") , " has been added.")
+        print("Income of " , self.amount  , " on the " , self.date.strftime("%d/%m/%Y") , " has been added.")
 
     def output(self, amount, date, category, description):
         print("Income of: ")

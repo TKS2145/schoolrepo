@@ -6,16 +6,16 @@ from datetime import datetime
 def ListTransactions():
     
     
-    if len(IncomeList) != 0 :
+    if len(IncomeList) != 0 :   #If IncomeList not empty
         print("Incomes:")
-        for i in range(0, len(IncomeList)-1):
-            print(IncomeList[i].date.strftime("%d/%m/%Y") , " - " , IncomeList[i].category , " - " , IncomeList[i].amount)
-    else:
+        for i in IncomeList:
+            print(i.date.strftime("%d/%m/%Y") , " - " , i.category , " - " , i.amount)
+    else:   #Else it empty
         print("There are no incomes.")
 
-    if len(ExpenseList) != 0 :
+    if len(ExpenseList) != 0 :  #If ExpenseList not empty
         print("Expenses:")
-        for i in range(0, len(ExpenseList) -1):
-            print(ExpenseList[i].date.strftime("%d/%m/%Y") , " - " , ExpenseList[i].category , " - " , ExpenseList[i].amount)
-    else:
+        for i in ExpenseList:
+            print(i.date.strftime("%d/%m/%Y") , " - " , i.category , " - " , i.amount)
+    else:   #Else, it empty
         print("There are no expenses.")
