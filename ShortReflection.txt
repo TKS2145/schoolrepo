@@ -1,0 +1,22 @@
+What did I learn?
+
+    Coming from a computer science background I already knew programing. I knew that once a person learns the logic behind programing, that person can easily learn any other languages on the same level.
+    I already knew Visual Basic and therefore it was easy for me to know how to write the program but I did not know any python therefore I did not know what to write exactly. 
+    Therefore I learned python as a programing language and I also learned how easy it actually is to transition from one language to another.
+    I also learned that while the logic of programing stays the same in its core, I learned that the structure of the language does change. For example python has no main function by default can I run without it.
+    At the same time, since it is a dynamically typed language,  the language is mostly 'interpreted' everytime so when I added a main function, I had to call the main at the end to let the other modules be interpreted before the main is ran.
+
+What challenges you faced?
+
+    My greatest challenge was learning the structure of the language. Since at its core programing stays the same, I also had to go look for the equivalent command of the one I would have used in visual basic.
+    Some work easily but some are more complex and require more modifications.
+    Sometimes, the code would not work and the reason was because the structure was completely different; such as python being dynamically typed.
+    There were also a lot of bugs and a lot also came from small mistyped including lower and uppercase or brackets at the end of all functions.
+
+How do you intend to improve it, given more time?
+
+    For me, programing is like riding a bicycle. Surely having more courses, more readings and videos might help but only practice can help improve it.
+    That is why I intend to improve it by writing more codes using python to aquire the required necessary skills. I also plan to start looking at open-source codes and contribute if possible.
+    Also reading documentations and watching videos might help. 
+
+    

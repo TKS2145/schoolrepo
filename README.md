@@ -1,113 +1,39 @@
-# schoolrepo
+#TKS's README
 
-This is the file which I  will be using to share screenshots of my program and write my self reflection on.
+Here is my Budgect tracker assignment which will count as my first formative for programing 1.
 
-I am running the program from my linux command line directly as it provides better readability than the visual studio code command line
+The project fully command line and has several file which work together.
 
-Here is the start:
+To run the program, the file "BudgectTracker.py" must be run (either from an IDE or terminal). It contains the main of the program and calls every file which is needed when needed.
 
-![alt text](Screenshot_20251205_233327.png)
+The project will start and ask the user to press enter to start, then a sample Menu will be displace giving the option to choose between  6 options:
+Adding income, adding expenses, list transactions, filter the data, show a summary or exit the program.
 
-As can be seen, the program works and an option screen (on command line) is displayed. 
-Atempting to list transactions before adding any transactions returns the above message that there is nothing to list as all is empty.
-Program does not crash and option screen is displayed again awaiting for user to do the needfull.
+The user has to follow what the program ask of him/her.
 
-![alt text](Screenshot_20251205_233548.png)
+The program has several exception handling in it so it is nearly impossible for a normal user to crash it. 
 
-Trying to filter when no transactions were added also gives the same result and option screen is displayed again.
+It also accounts for user trying to list data before inputing the data.
 
-![alt text](Screenshot_20251205_233833.png)
+The menu is iterative so once an option has finished processing, the program waits for the user to press 'enter' then displays the menu again.
+The program exits when the user chooses '0' as option and displays a short closing message.
 
-Same for summary. Program does not crash when all data are empty.
+Modular programing is used a lot allowing code reusability.
 
-![alt text](Screenshot_20251205_234223.png)
+Sample Interaction:
 
-Here is just to show that the program exits wll even giving a goodbye message. I feel I should get these little details out of the way before diving into the deeper parts.
+    User runs BudgetTracker.py
+    Progams ask user to press enter
+    User presses enter and menu is displayed
 
-![alt text](Screenshot_20251205_234336.png)
+    User presses 1 and 2 to enter income and expense respectively.
+    User enters the data.
 
-Here a new transaction of type income has been added. Data is in float type allowing decimals to be entered.
+    User can press 3 to list transactions and get a short view of the transactions entered.
+    User can choose to filter by choosing option 4
+    User chooses 5 to be shown a summary and how much money user is saving or owing.
 
+    User chooses option 0 to exit the program
+    Closing message is displayed
 
-![alt text](Screenshot_20251205_234617.png)
-
-List module works as seen above. Skiping expense as it uses the same functionalities.
-
-![alt text](Screenshot_20251206_000901.png)
-
-Expense is also added without issue
-
-![alt text](Screenshot_20251206_001415.png) 
-![alt text](Screenshot_20251206_001425.png)
-
-Added more incomes and expenses
-
-![alt text](Screenshot_20251206_001629.png)
-
-As can be seen, the list module to list the transactions works
-Incomes and Expenses are listed separately allowing easy redability
-
-![alt text](Screenshot_20251206_001809.png)
-
-Entering a number outside 5 does not crash the program, user is asked to enter the number again and entering a text does not crash and a slightly different message is sent to the user
-
-![alt text](Screenshot_20251206_002221.png)
-
-Summary also works and provides number of incomes, number of expenses, sum of all incomes, sum of all expenses and provides the amount saved.
-
-
-Using different data to test if expenses is greater than income:
-
-![alt text](Screenshot_20251206_010648.png)
-
-As seen, when expense is greater than income, the amount due is shown instead and here it is 1000
-I deliberately did not add a unit (Roupies nor Dollars). That way the user can calculate using any currency he/she wants
-
-![alt text](Screenshot_20251206_011017.png)
-
-Rare case total incomes and total expenses are exactly the same, messages changes to reflect all money spent.
-
-
-![alt text](Screenshot_20251206_011437.png)
-
-Confirming option 3 to list transaction works
-
-![alt text](Screenshot_20251206_115340.png)
-
-Here is the new data and the filter menu allowing 3 possible ways to filter the data.
-
-
-![alt text](Screenshot_20251206_120748.png)
-
-When categoryy is selected, all different categorices are obtained and displayed. The user has to enter the number corresponding to the category he/she wishes to filter by. This prevent user typos.
-
-![alt text](image.png)
- 
- As seen here, there is 'Gift' catogory twice, one in income and one in expense. Still, 'Gift' catogory appears only once in the category list.
-
- ![alt text](image-1.png)
-
- As seen here, it does not fail to display all transactions which have a 'Gift' category.
-
- ![alt text](Screenshot_20251206_122313.png)
-
- ![alt text](Screenshot_20251206_122447.png)
-
- Here we can see that the filtering by month works perfectly.
-
-![alt text](Screenshot_20251206_122615.png)
-
-And here lastly is the filter by type. Since the 'filter by type' does the same thing as 'list transaction' module, I used modular programing to reuse existing module.
-
-Last test:
-
-![alt text](Screenshot_20251206_123824.png)
-
-As seen 'TESING' category was entered but the Category is captitalised to make it consistent and remove lower/upper case issues.
-
-
-Lastly:
-
-![alt text](Screenshot_20251206_122830.png)
-
-Showing a summary and finish the program. All works fine and the program is safe from  user crashing it. It also accounts for several user misteps but since it is customisable for thee user , user enters its own categories, typos can make it a little messy for the user but the program will not crash.
+If you need more detail, please go through Evidence(screenshots).md for most possible interactions.
