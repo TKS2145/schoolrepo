@@ -36,5 +36,5 @@ Sample Interaction:
     User chooses option 0 to exit the program
     Closing message is displayed
 
-If you need more detail, please go through [text](Evidence(screenshots).md) for most possible interactions.
+If you need more detail, please go through [Evidence(screenshots.md](Evidence(screenshots).md) for most possible interactions.
 
