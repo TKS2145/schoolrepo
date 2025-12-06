@@ -59,14 +59,14 @@ def CategoryFilter():
         try:
             print(CategoryList)
             index = int(input("Please enter the number corresponding to the item to filter by (1 for first item, 2 for second, etc): ")) #Enter the position of the item
-            index -= 1   #As array index starts with 0 so one less1 for first, 2 for second...)
+            index -= 1   #As array index starts with 0 so one less 1 for first, 2 for second...)
             Category = CategoryList[index]  #Category item obtained to filter the lists
             break
         except:
             print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
         
-    for i in range(0,len(IncomeList)):
-        if Category == IncomeList[i].Category :
+    for i in range(0, len(IncomeList)):
+        if Category == IncomeList[i].category :
             IncomeList[i].output
 
     for i in range(0, len(ExpenseList)):

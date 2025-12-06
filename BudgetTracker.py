@@ -16,6 +16,8 @@ def main():
 
     while True:
 
+        input("Press enter to continue\n")
+
         option = OptionScreen()
     
         print("Option ", option, " selected. \n")

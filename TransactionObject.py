@@ -21,7 +21,7 @@ class transaction:
                 self.date = datetime.strptime(input("Please enter date of transaction(DD/MM/YYYY): "), "%d/%m/%Y") #Enter the date as string, formats as string and passes into class date variable
                 break
             except:
-                print("Please enter a date (DD/MM/YYYY)")
+                print("Please enter a valid date (DD/MM/YYYY)")
 
 
         self.category = input("Please enter a category: ")
