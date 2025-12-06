@@ -47,7 +47,7 @@ Added more incomes and expenses
 As can be seen, the list module to list the transactions works
 Incomes and Expenses are listed separately allowing easy redability
 
-![alt text](Screenshot_20251206_001809.png)
+![alt text](Screenshots/Screenshot_20251206_001809.png)
 
 Entering a number outside 5 does not crash the program, user is asked to enter the number again and entering a text does not crash and a slightly different message is sent to the user
 
