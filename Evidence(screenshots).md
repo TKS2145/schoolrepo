@@ -1,6 +1,7 @@
 # schoolrepo
 
 This is the file which I  will be using to share screenshots of my program and write my self reflection on.
+All images display corectly on Github but if any link is not displaying, please click on it to see it from the Screenshots folder
 
 I am running the program from my linux command line directly as it provides better readability than the visual studio code command line
 
@@ -112,4 +113,4 @@ Lastly:
 
 Showing a summary and finish the program. All works fine and the program is safe from  user crashing it. It also accounts for several user misteps but since it is customisable for thee user , user enters its own categories, typos can make it a little messy for the user but the program will not crash.
 
-Thank you for reading and going through this README file
+Thank you for reading and going through this Evidence(sreenshots).md file
