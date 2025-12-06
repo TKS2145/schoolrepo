@@ -12,7 +12,7 @@ As can be seen, the program works and an option screen (on command line) is disp
 Atempting to list transactions before adding any transactions returns the above message that there is nothing to list as all is empty.
 Program does not crash and option screen is displayed again awaiting for user to do the needfull.
 
-![alt text](Screenshot_20251205_233548.png)
+![alt text](Screenshots/Screenshot_20251205_233548.png)
 
 Trying to filter when no transactions were added also gives the same result and option screen is displayed again.
 
