@@ -65,14 +65,13 @@ def CategoryFilter():
         except:
             print("Please enter the 'number' corresponding to the item to filter by (1 for first item, 2 for second, etc): ")
         
-    for i in range(0, len(IncomeList)):
-        if Category == IncomeList[i].category :
-            IncomeList[i].output
+    for i in IncomeList:
+        if Category == i.category :
+            i.output()
 
-    for i in range(0, len(ExpenseList)):
-        if Category == ExpenseList[i].category :
-            ExpenseList[i].output
-
+    for i in ExpenseList:
+        if Category == i.category :
+            i.output()
     return
 
 
@@ -96,12 +95,12 @@ def MonthFilter():
     for i in IncomeList:
         if i.date.month == VarMonth:
             IsPresent = True
-            print(i.output)
+            i.output()
 
     for i in ExpenseList:
         if i.date.month == VarMonth:
             IsPresent = True
-            print(i.output)
+            i.output()
 
     if IsPresent == False:  #Loops not executed so no matching month found in the lists
         print("No month corresponds to month entered.")

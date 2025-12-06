@@ -25,13 +25,15 @@ class transaction:
 
 
         self.category = input("Please enter a category: ")
+        self.category = self.category.capitalize()
         self.description = input("Please enter a description: ")
 
-    def output(self, amount, date, category, description):
+    def output(self):
         print("Amount: " , self.amount)
-        print("Date: " , self.date)
+        print("Date: " , self.date.strftime("%d/%m/%Y"))
         print("Category: " , self.category)
         print("Description: ", self.description)
+        print()     #Empty line for readability
 
 
 
@@ -41,10 +43,9 @@ class Income(transaction):
     def HasBeenAdded(self):
         print("Income of " , self.amount  , " on the " , self.date.strftime("%d/%m/%Y") , " has been added.")
 
-    def output(self, amount, date, category, description):
+    def output(self):
         print("Income of: ")
-        super().output(amount, date, category, description)
-
+        super().output()
 
 class Expense(transaction):
     pass
@@ -52,6 +53,6 @@ class Expense(transaction):
     def HasBeenAdded(self):
         print("Expense of " , self.amount  , " on the " , self.date.strftime("%d/%m/%Y") , " has been added.")
 
-    def output(self, amount, date, category, description):
+    def output(self):
         print("Expense of: ")
-        super().output(amount, date, category, description)
+        super().output()

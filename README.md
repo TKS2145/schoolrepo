@@ -67,3 +67,47 @@ I deliberately did not add a unit (Roupies nor Dollars). That way the user can c
 
 Rare case total incomes and total expenses are exactly the same, messages changes to reflect all money spent.
 
+
+![alt text](Screenshot_20251206_011437.png)
+
+Confirming option 3 to list transaction works
+
+![alt text](Screenshot_20251206_115340.png)
+
+Here is the new data and the filter menu allowing 3 possible ways to filter the data.
+
+
+![alt text](Screenshot_20251206_120748.png)
+
+When categoryy is selected, all different categorices are obtained and displayed. The user has to enter the number corresponding to the category he/she wishes to filter by. This prevent user typos.
+
+![alt text](image.png)
+ 
+ As seen here, there is 'Gift' catogory twice, one in income and one in expense. Still, 'Gift' catogory appears only once in the category list.
+
+ ![alt text](image-1.png)
+
+ As seen here, it does not fail to display all transactions which have a 'Gift' category.
+
+ ![alt text](Screenshot_20251206_122313.png)
+
+ ![alt text](Screenshot_20251206_122447.png)
+
+ Here we can see that the filtering by month works perfectly.
+
+![alt text](Screenshot_20251206_122615.png)
+
+And here lastly is the filter by type. Since the 'filter by type' does the same thing as 'list transaction' module, I used modular programing to reuse existing module.
+
+Last test:
+
+![alt text](Screenshot_20251206_123824.png)
+
+As seen 'TESING' category was entered but the Category is captitalised to make it consistent and remove lower/upper case issues.
+
+
+Lastly:
+
+![alt text](Screenshot_20251206_122830.png)
+
+Showing a summary and finish the program. All works fine and the program is safe from  user crashing it. It also accounts for several user misteps but since it is customisable for thee user , user enters its own categories, typos can make it a little messy for the user but the program will not crash.
