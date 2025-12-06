@@ -6,7 +6,7 @@ I am running the program from my linux command line directly as it provides bett
 
 Here is the start:
 
-![alt text](Sreenshots/Screenshot_20251205_233327.png)
+![alt text](https://github.com/TKS2145/schoolrepo/tree/main/Screenshots/Screenshot_20251205_233327.png)
 
 As can be seen, the program works and an option screen (on command line) is displayed. 
 Atempting to list transactions before adding any transactions returns the above message that there is nothing to list as all is empty.
